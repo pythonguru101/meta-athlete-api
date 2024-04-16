@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+  meta_api:
+    build: '.'
+    image: meta_api:latest
+    container_name: meta_api
+    env_file:
+      - ./.env
+    ports:
+      - '8889:8889'
+    volumes:
+      - .:/srv
+    depends_on:
+      - meta_postgres
+    networks:
+      - meta_athelete_net
+
+  meta_postgres:
+    image: postgres:alpine3.17
+    container_name: meta_postgres
+    restart: always
+    env_file:
+      - ./.env
+    networks:
+      - meta_athelete_net
+
+  meta_adminer:
+    image: adminer
+    container_name: meta_adminer
+    restart: always
+    ports:
+      - 8890:8080
+    depends_on:
+      - meta_postgres
+    networks:
+      - meta_athelete_net
+
+
+networks:
+  meta_athelete_net:
+    driver: bridge

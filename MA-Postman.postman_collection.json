@@ -1,0 +1,917 @@
+{
+	"info": {
+		"_postman_id": "de34dff1-da1c-4d25-b428-487ddf8a6055",
+		"name": "MA-Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10457850"
+	},
+	"item": [
+		{
+			"name": "LInk User with NFT Cards",
+			"item": [
+				{
+					"name": "LInk User with NFT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"owner\": \"Adrian M\",\n    \"u_id\": \"ba44f89c-3695-4225-8dd9-cbbff3e2eaef\",\n    \"tier\": \"GOLD\",\n    \"value\": 1000,\n    \"athlete_card_id\": 2,\n    \"is_on_market\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftmarketplace_add",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftmarketplace_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All NFT User links",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftmarketplace",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftmarketplace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get NFT User link by UUID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftmarketplace/12",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftmarketplace",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service Health",
+			"item": [
+				{
+					"name": "Add Health Service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cardiology\",\n    \"code\": \"erhtt4ydDff3af4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/healthservice_add",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthservice_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Health services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/healthservices",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthservices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Health Service by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/healthservices/4",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthservices",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Health Service by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/healthservices/4",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthservices",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Health Service by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dentistry\",\n    \"code\": \"44444\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/healthservices/4",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthservices",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tier Card CRUD",
+			"item": [
+				{
+					"name": "All Tiers Cards",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftcardstier",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftcardstier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tier Card by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftcardstier/1",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftcardstier",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tier Card by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftcardstier/2",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftcardstier",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tier Card by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"card_type\": \"PLATINUM\",\n    \"athlete_id\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftcardstier/1",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftcardstier",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Tier Card by ID",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"card_type\": \"PLATINUM\",\n    \"athlete_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftcardstier_add",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftcardstier_add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Athlete Model CRUD",
+			"item": [
+				{
+					"name": "All Athletes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/members",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Athlete by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/members/2",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"members",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Athlete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sport_type",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "school_grade",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "1990-11-04",
+									"type": "text"
+								},
+								{
+									"key": "birthplace",
+									"value": "USA",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "schoolgrade",
+									"value": "A",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "photo_url",
+									"type": "file",
+									"src": "/Users/adrianmf94/Documents/Projects/ICCHA/nft-meta-athlete-api/app/static/althleteimages/1280-man-run.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/members_add",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"members_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update - Athlete",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sport_type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "school_grade",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Jane Doe",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "1990-11-04",
+									"type": "text"
+								},
+								{
+									"key": "birthplace",
+									"value": "USA",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "68",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "83",
+									"type": "text"
+								},
+								{
+									"key": "schoolgrade",
+									"value": "B",
+									"type": "text"
+								},
+								{
+									"key": "photo_url",
+									"type": "file",
+									"src": "/Users/adrianmf94/Documents/Projects/ICCHA/nft-meta-athlete-api/app/static/althleteimages/image.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/members/2",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"members",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Athlete by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/members/1",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"members",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MediaVisual",
+			"item": [
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_url",
+									"type": "file",
+									"src": "/Users/adrianmf94/Documents/Projects/ICCHA/nft-meta-athlete-api/app/static/uploads/healthservice.postman_collection.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/uploadfile",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"uploadfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "End User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Adrian M\",\n    \"wallet_id\": \"68b45a26-ed8f-402e-895d-58f9addefd42\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/users_add",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/users",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Meta Athlete by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/users/33",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"33"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meta Athletes NFT",
+			"item": [
+				{
+					"name": "Add Meta Athlete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/Users/adrianmf94/Documents/Projects/ICCHA/nft-meta-athlete-api/app/static/metaathletesimages/1280-man-run.jpeg"
+								},
+								{
+									"key": "name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "athlete_account",
+									"value": "EEAADD44e",
+									"type": "text"
+								},
+								{
+									"key": "kind",
+									"value": "Goalkeeper",
+									"type": "text"
+								},
+								{
+									"key": "sport",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "2010/10/10",
+									"type": "text"
+								},
+								{
+									"key": "birthplace",
+									"value": "USA",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "schoolgrade",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "cardMinted",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftathletecard_add",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftathletecard_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Meta Athletes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftathletecard",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftathletecard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Meta Athlete by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{nft_api_url}}/api/v1/nftathletecard/7",
+							"host": [
+								"{{nft_api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nftathletecard",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
